@@ -1,0 +1,45 @@
+{
+  "name": "@orizn/langchain",
+  "version": "0.1.0",
+  "description": "LangChain.js tools for Orizn Visa API — 39,585 passport-destination pairs in 15 languages",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "langchain",
+    "visa",
+    "travel",
+    "passport",
+    "ai-agent",
+    "tool",
+    "orizn"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MattJeff/langchain-orizn-js"
+  },
+  "homepage": "https://visa.orizn.app",
+  "author": "Orizn",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@langchain/core": ">=0.2.0",
+    "zod": ">=3.22.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.10.0"
+  },
+  "peerDependencies": {
+    "@langchain/core": ">=0.2.0"
+  }
+}

@@ -16,14 +16,14 @@ import { OriznQuickVisaCheckTool, OriznVisaCheckTool } from "@orizn/langchain";
 // No API key needed for quick checks
 const quick = new OriznQuickVisaCheckTool();
 const result = await quick.invoke(
-  JSON.stringify({ passport: "FRA", destination: "JPN" })
+  { passport: "FRA", destination: "JPN" }
 );
 console.log(result);
 
 // Full details (needs API key)
 const full = new OriznVisaCheckTool("your-api-key");
 const details = await full.invoke(
-  JSON.stringify({ passport: "FRA", destination: "JPN", lang: "fr" })
+  { passport: "FRA", destination: "JPN", lang: "fr" }
 );
 console.log(details);
 ```

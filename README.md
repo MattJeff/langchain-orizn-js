@@ -57,6 +57,12 @@ const tools = [
 - [MCP Server](https://github.com/MattJeff/orizn-mcp-server)
 - [Python package](https://pypi.org/project/langchain-orizn/)
 
+## Feedback
+
+Building a travel agent or visa tool? We'd love to hear what you're building.
+
+→ **api@orizn.app** — Feature requests, partnerships, and questions welcome.
+
 ## License
 
 MIT

@@ -3,6 +3,8 @@ import { z } from "zod";
 
 const BASE_URL = "https://visa.orizn.app";
 
+let _hinted = false;
+
 export class OriznVisaCheckTool extends StructuredTool {
   name = "orizn_visa_check";
   description =
@@ -35,6 +37,15 @@ export class OriznVisaCheckTool extends StructuredTool {
   constructor(apiKey?: string) {
     super();
     this.apiKey = apiKey ?? process.env.ORIZN_API_KEY;
+
+    if (!this.apiKey && !_hinted) {
+      _hinted = true;
+      console.warn(
+        "[langchain-orizn] No API key — only quick checks available.\n" +
+        "[langchain-orizn] Free key → https://visa.orizn.app\n" +
+        '[langchain-orizn] new OriznVisaCheckTool("orizn_visa_...")'
+      );
+    }
   }
 
   async _call({
